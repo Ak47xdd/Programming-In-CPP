@@ -47,8 +47,8 @@ public:
 
     void display(Student &main)
     {
-        cout << endl
-             << "--Basic Details--" << endl;
+        cout << "\n";
+        cout << "--Basic Details--" << endl;
         cout << "Name: " << main.name << endl;
         cout << "Dept: " << main.dept << endl;
         cout << "--Marks Sheet--" << endl;
