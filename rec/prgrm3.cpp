@@ -2,12 +2,12 @@
 
 int main(int argc, char *argv[])
 {
-    char str[30];
+    int n;
 
-    puts("enter a string : ");
-    gets(str);
+    std::cout << "Enter an integer : " << std::endl;
+    std::cin >> n;
 
-    puts(str);
+    (n % 2 == 0) ? std::cout << n << " is even " : std::cout << " is odd " << std::endl;
 
     return 0;
 }
