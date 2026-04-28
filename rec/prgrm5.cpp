@@ -2,17 +2,35 @@
 
 int main(int argc, char *argv[])
 {
-    int a, b, sum;
+    char oprt;
+    float num_1, num_2;
 
-    std::cout << "Enter the first number : " << std::endl;
-    std::cin >> a;
+    std::cout << "Enter an operator(+.-.*, /) : " << std::endl;
+    std::cin >> oprt;
 
-    std::cout << "Enter the second number : " << std::endl;
-    std::cin >> b;
+    std::cout << "Enter two numbers : " << std::endl;
+    std::cin >> num_1 >> num_2;
 
-    sum = a + b;
+    switch (oprt)
+    {
+    case '+':
+        std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
+        break;
 
-    std::cout << "Sum of two numbers " << a << " and " << b << " is : " << sum << std::endl;
+    case '-':
+        std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
+        break;
 
+    case '*':
+        std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
+        break;
+
+    case '/':
+        std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
+        break;
+
+    default:
+        std::cout << "Error! The operator is not correct" << std::endl;
+    }
     return 0;
 }
