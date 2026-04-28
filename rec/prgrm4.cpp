@@ -2,14 +2,24 @@
 
 int main(int argc, char *argv[])
 {
-    std::string name;
-    int age;
+    int num_1, num_2, num_3;
 
-    std::cout << "Enter name and age : " << std::endl;
-    std::cin >> name >> age;
+    std::cout << "Enter three numbers : " << std::endl;
+    ;
+    std::cin >> num_1 >> num_2 >> num_3;
 
-    std::cout << "Name : " << name << std::endl;
-    std::cout << "Age : " << age << std::endl;
+    if (num_1 >= num_2 && num_1 >= num_3)
+    {
+        std::cout << "Largest number : " << num_1 << std::endl;
+    }
+    else if (num_2 >= num_1 && num_2 >= num_3)
+    {
+        std::cout << "Largest number : " << num_2 << std::endl;
+    }
+    else
+    {
+        std::cout << "Largest number : " << num_3 << std::endl;
+    }
 
     return 0;
 }
