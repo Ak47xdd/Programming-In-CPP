@@ -1,21 +1,17 @@
 #include <iostream>
 
-int main(int argc, char *argv[])
+int main()
 {
-    float P, R, T, SI;
+    int n, sum = 0;
 
-    std::cout << "Enter the Principle Amount : " << std::endl;
-    std::cin >> P;
+    std::cout << "Enter a positive integer : " << std::endl;
+    std::cin >> n;
 
-    std::cout << "Enter the rate of interest : " << std::endl;
-    std::cin >> R;
-
-    std::cout << "Enter the Time duration : " << std::endl;
-    std::cin >> T;
-
-    SI = (P * R * T) / 100;
-
-    std::cout << "Simple Interest : " << SI << std::endl;
+    for (int i = 1; i <= n; ++i)
+    {
+        sum += i;
+    }
+    std::cout << "Sum = " << sum << std::endl;
 
     return 0;
 }
