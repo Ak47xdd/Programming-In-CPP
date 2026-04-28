@@ -1,13 +1,17 @@
 #include <iostream>
 
-int main(int argc, char *argv[])
+int main()
 {
-    int i;
-
-    std::cout << "Enter the input value : " << std::endl;
-    std::cin >> i;
-
-    std::cout << i << std::endl;
-
+    int n;
+    std::cout << "Enter an integer : " << std::endl;
+    std::cin >> n;
+    if (n % 2 == 0)
+    {
+        std::cout << n << " is even " << std::endl;
+    }
+    else
+    {
+        std::cout << n << " is odd " << std::endl;
+    }
     return 0;
 }
