@@ -1,20 +1,22 @@
 #include <iostream>
+using namespace std;
 
-int main(int argc, char *argv[])
+class Test
 {
-    int number;
-    int sum = 0;
-
-    std::cout << "Enter a number : " << std::endl;
-    std::cin >> number;
-
-    while (number > 0)
+public:
+    Test()
     {
-        std::cout << "Enter a number : " << std::endl;
-        std::cin >> number;
-        sum += number;
+        cout << "Constructor Called" << endl;
     }
-    std::cout << "The sum is : " << sum << std::endl;
+    ~Test()
+    {
+        cout << "Destructor Called" << endl;
+    }
+};
+
+int main()
+{
+    Test obj;
 
     return 0;
 }
