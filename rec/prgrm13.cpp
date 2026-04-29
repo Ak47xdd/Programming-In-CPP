@@ -1,27 +1,38 @@
 #include <iostream>
+using namespace std;
 
-int main(int argc, char *argv[])
+class Student
 {
-    int n, num, digit, rev = 0;
+public:
+    int roll_no;
+    string name;
 
-    std::cout << "Enter a positive number : " << std::endl;
-    std::cin >> num;
-
-    n = num;
-
-    do
+    void get()
     {
-        digit = num % 10;
-        rev = (rev * 10) + digit;
-        num = num / 10;
-    } while (num != 0);
+        cout << "Enter roll and name : ";
+        cin >> roll_no >> name;
+    }
+    void display()
+    {
+        cout << "Roll : " << roll_no << "\nName : " << name;
+    }
+};
 
-    std::cout << "The reverse of the number is : " << rev << std::endl;
+int main()
+{
+    Student s[3];
 
-    if (n == rev and n > 0)
-        std::cout << "The number is a palindrome" << std::endl;
-    else
-        std::cout << "The number is not a palindrome" << std::endl;
+    for (int i = 0; i < 3; i++)
+    {
+        s[i].get();
+    }
+
+    cout << "\nStudent Details : \n";
+
+    for (int i = 0; i < 3; i++)
+    {
+        s[i].display();
+    }
 
     return 0;
 }
