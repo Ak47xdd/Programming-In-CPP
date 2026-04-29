@@ -1,25 +1,24 @@
 #include <iostream>
+using namespace std;
 
-int main(int argc, char *argv[])
+int add(int a, int b)
 {
-    int x = 5, y = 6, z = 7, w = 8;
+    return a + b;
+}
+int add(int a, int b, int c)
+{
+    return a + b + c;
+}
+double add(double a, double b)
+{
+    return a + b;
+}
 
-    std::cout << ++x << std::endl;
-    std::cout << --y << std::endl;
-
-    int a = 10, b = 3, sum, diff, mul, div, rem;
-
-    sum = a + b;
-    diff = a - b;
-    mul = a * b;
-    div = a / b;
-    rem = a % b;
-
-    std::cout << "Sum : " << sum << std::endl;
-    std::cout << "Difference : " << diff << std::endl;
-    std::cout << "Product : " << mul << std::endl;
-    std::cout << "Quotient : " << div << std::endl;
-    std::cout << "Remainder : " << rem << std::endl;
+int main()
+{
+    cout << "Sum of 2 integers : " << add(10, 20) << endl;
+    cout << "Sum of 3 integers : " << add(5, 10, 15) << endl;
+    cout << "Sum of 2 floats : " << add(2.5, 3.5) << endl;
 
     return 0;
 }
