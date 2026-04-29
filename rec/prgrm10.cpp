@@ -1,24 +1,33 @@
 #include <iostream>
 
-int main(int argc, char *argv[])
+int fact(int n)
 {
-    int num_1, num_2, num_3;
-
-    std::cout << "Enter three numbers : " << std::endl;
-    ;
-    std::cin >> num_1 >> num_2 >> num_3;
-
-    if (num_1 >= num_2 && num_1 >= num_3)
+    if (n < 0)
     {
-        std::cout << "Largest number : " << num_1 << std::endl;
+        std::cout << "Error: Factorial is not defined for negative numbers." << std::endl;
+        return -1; // Return -1 to indicate an error
     }
-    else if (num_2 >= num_1 && num_2 >= num_3)
+    else if (n == 0 || n == 1)
     {
-        std::cout << "Largest number : " << num_2 << std::endl;
+        return 1; // Factorial of 0 and 1 is 1
     }
     else
     {
-        std::cout << "Largest number : " << num_3 << std::endl;
+        return n * fact(n - 1); // Recursive call
+    }
+}
+
+int main(int argc, char *argv[])
+{
+    int number;
+
+    std::cout << "Enter a positive integer : ";
+    std::cin >> number;
+
+    int result = fact(number);
+    if (result != -1)
+    {
+        std::cout << "Factorial of " << number << " = " << result << std::endl;
     }
 
     return 0;
