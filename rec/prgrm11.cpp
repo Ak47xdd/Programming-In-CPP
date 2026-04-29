@@ -1,36 +1,42 @@
 #include <iostream>
 
+class Student
+{
+private:
+    std::string name, regno, branch;
+    int sem;
+
+public:
+    void input();
+    void display();
+};
+
+void Student::input()
+{
+    std::cout << "Enter name : ";
+    std::cin >> name;
+    std::cout << "Enter regno : ";
+    std::cin >> regno;
+    std::cout << "Enter branch : ";
+    std::cin >> branch;
+    std::cout << "Enter sem : ";
+    std::cin >> sem;
+}
+
+void Student::display()
+{
+    std::cout << "Name : " << name << std::endl;
+    std::cout << "Regno : " << regno << std::endl;
+    std::cout << "Branch : " << branch << std::endl;
+    std::cout << "Sem : " << sem << std::endl;
+}
+
 int main(int argc, char *argv[])
 {
-    char oprt;
-    float num_1, num_2;
+    Student s1;
 
-    std::cout << "Enter an operator(+.-.*, /) : " << std::endl;
-    std::cin >> oprt;
+    s1.input();
+    s1.display();
 
-    std::cout << "Enter two numbers : " << std::endl;
-    std::cin >> num_1 >> num_2;
-
-    switch (oprt)
-    {
-    case '+':
-        std::cout << num_1 << " + " << num_2 << " = " << num_1 + num_2 << std::endl;
-        break;
-
-    case '-':
-        std::cout << num_1 << " - " << num_2 << " = " << num_1 - num_2 << std::endl;
-        break;
-
-    case '*':
-        std::cout << num_1 << " * " << num_2 << " = " << num_1 * num_2 << std::endl;
-        break;
-
-    case '/':
-        std::cout << num_1 << " / " << num_2 << " = " << num_1 / num_2 << std::endl;
-        break;
-
-    default:
-        std::cout << "Error! The operator is not correct" << std::endl;
-    }
     return 0;
 }
