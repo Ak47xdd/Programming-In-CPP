@@ -1,24 +1,36 @@
 #include <iostream>
+using namespace std;
 
-void sq_root()
+class Distance
 {
-    double x;
+private:
+    int feet, inches;
 
-    std::cout << "Enter the number : ";
-    std::cin >> x;
-    if (x < 0)
+public:
+    Distance(int f, int i)
     {
-        std::cout << "Error: Cannot compute square root of a negative number." << std::endl;
-        return;
+        feet = f;
+        inches = i;
     }
-    else
+    void display()
     {
-        std::cout << "Square : " << x * x << std::endl;
+        cout << "F : " << feet << " I : " << inches << endl;
     }
-}
+    Distance operator-()
+    {
+        return Distance(-feet, -inches);
+    }
+};
 
-int main(int argc, char *argv[])
+int main()
 {
-    sq_root();
+    Distance D1(11, 10);
+    D1 = -D1;
+    D1.display();
+
+    Distance D2(-23, 90);
+    D2 = -D2;
+    D2.display();
+
     return 0;
 }
