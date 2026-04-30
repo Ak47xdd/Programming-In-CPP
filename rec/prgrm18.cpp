@@ -1,17 +1,30 @@
 #include <iostream>
+using namespace std;
 
-int main(int argc, char *argv[])
+class Test
 {
-    int n = 7;
+private:
+    int num1, num2;
 
-    if (n <= 0 || n >= 10)
+public:
+    Test()
     {
-        std::cout << "n is not in range [0, 10]" << std::endl;
+        num1 = 10;
+        num2 = 120;
     }
-    else
-    {
-        std::cout << "n is in range [0, 10]" << std::endl;
-    }
+    friend void display(Test t);
+};
+
+void display(Test t)
+{
+    cout << "Value of num : " << t.num1 << " " << t.num2;
+}
+
+int main()
+{
+    Test obj;
+
+    display(obj);
 
     return 0;
 }
