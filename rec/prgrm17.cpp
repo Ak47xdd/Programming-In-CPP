@@ -1,18 +1,30 @@
 #include <iostream>
+using namespace std;
 
-int main(int argc, char *argv[])
+class Base
 {
-    int age = 25;
-    bool isStudent = true;
+public:
+    virtual void show()
+    {
+        cout << "This is base class function" << endl;
+    }
+};
 
-    if (age > 18 && isStudent)
+class Derived : public Base
+{
+public:
+    void show()
     {
-        std::cout << "Student" << std::endl;
+        cout << "This is Derived class function" << endl;
     }
-    else
-    {
-        std::cout << "Not Student" << std::endl;
-    }
+};
+
+int main()
+{
+    Base *b;
+    Derived d;
+    b = &d;
+    b->show();
 
     return 0;
 }
