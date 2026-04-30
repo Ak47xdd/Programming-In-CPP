@@ -1,17 +1,37 @@
 #include <iostream>
+using namespace std;
 
-int main(int argc, char *argv[])
+class A
 {
-    bool n = false;
+private:
+    string name;
+    long long num;
 
-    if (!n)
+public:
+    A()
     {
-        std::cout << "Please log in" << std::endl;
+        num = 9867452488;
+        name = "AKHIL";
     }
-    else
+    friend class B;
+};
+
+class B
+{
+public:
+    void display(A obj)
     {
-        std::cout << "Welcome to this page!" << std::endl;
+        cout << "Name :" << obj.name << endl;
+        cout << "Mobile : " << obj.num << endl;
     }
+};
+
+int main()
+{
+    A objA;
+    B objB;
+
+    objB.display(objA);
 
     return 0;
 }
