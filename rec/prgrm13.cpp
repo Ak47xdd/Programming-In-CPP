@@ -14,7 +14,7 @@ public:
     }
     void display()
     {
-        cout << "Roll : " << roll_no << "\nName : " << name;
+        cout << "\nRoll : " << roll_no << "\nName : " << name;
     }
 };
 
