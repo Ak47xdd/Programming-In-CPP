@@ -1,21 +1,35 @@
 #include <iostream>
-
-class Person
-{
-public:
-    std::string name;
-    int number;
-};
+using namespace std;
 
 int main()
 {
-    Person p1;
+    int arr[5], temp;
 
-    std::cout << "Enter the name : ";
-    std::cin >> p1.name;
-    std::cout << "Enter the number : ";
-    std::cin >> p1.number;
+    cout << "Enter 5 elements : " << endl;
 
-    std::cout << "Values : " << p1.name << " : " << p1.number << std::endl;
+    for (int i = 0; i < 5; i++)
+    {
+        cin >> arr[i];
+    }
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = i + 1; j < 5; j++)
+        {
+            if (arr[i] > arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+
+    cout << "Sorted elements in ascending order : " << endl;
+
+    for (int i = 0; i < 5; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
     return 0;
 }
