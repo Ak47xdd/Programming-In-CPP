@@ -28,7 +28,6 @@ int main()
 {
     Rectangle r;
     r.getData();
-
     r.area();
 
     return 0;
