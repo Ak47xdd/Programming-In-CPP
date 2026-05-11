@@ -3,10 +3,10 @@ using namespace std;
 
 class Complex
 {
-private :
+private:
     int real, imag;
 
-public :
+public:
     Complex()
     {
         real = 0;
@@ -22,7 +22,7 @@ public :
         // 3 + 4i
         cout << real << " + " << imag << "i" << endl;
     }
-    Complex operator + (Complex obj)
+    Complex operator+(Complex obj)
     {
         // 2 + 3i -> C1
         // 5 + 6i -> C2
